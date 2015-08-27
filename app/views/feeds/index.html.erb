@@ -1,9 +1,8 @@
 <section class="deploy-to-tweet">
     <p id="notice"><%= notice %></p>
 
-    <h1>I've deployed using twitter <a href="https://smoke.snap-ci.com/snap-ci-examples/snap_leaderboard/branch/master"><img src="https://smoke.snap-ci.com/snap-ci-examples/snap_leaderboard/branch/master/build_image" alt="Build Status"></a></h1>
-
-
+    <h1>I've deployed using <span class="twitter">twitter</span> <%= image_tag 'tweeter.jpg', class: 'tweet-image' %></h1>
+    <h5><a href="https://smoke.snap-ci.com/snap-ci-examples/snap_leaderboard/branch/master"><img src="https://smoke.snap-ci.com/snap-ci-examples/snap_leaderboard/branch/master/build_image" alt="Build Status"></a></h5>
 
     <div class="cool-tweets">
         <table>
@@ -18,7 +17,10 @@
             <% @feeds.each do |feed| %>
               <tr>
                 <td><%= feed.name %></td>
-                <td><%= feed.message %></td>
+                <td><%= raw feed.message
+                                    .gsub(/ @(?<arroba>\w+)/, ' <a href="https://twitter.com/\k<arroba>">@\k<arroba></a>')
+                                    .gsub(/ #(?<hashtag>\w+)/, ' <a href="https://twitter.com/hashtag/\k<hashtag>?src=hash">#\k<hashtag></a>') %>
+                </td>
               </tr>
             <% end %>
           </tbody>

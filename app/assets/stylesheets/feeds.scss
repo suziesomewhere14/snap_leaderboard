@@ -8,4 +8,13 @@ section.deploy-to-tweet {
       @include shift(2);
     }
   }
+
+  .twitter {
+    color: #28A9E0;
+  }
+
+  .tweet-image {
+    width: 50px;
+    padding-left: 5px;
+  }
 }
