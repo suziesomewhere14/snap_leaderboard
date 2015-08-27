@@ -1,3 +1,11 @@
-// Place all the styles related to the feeds controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+section.deploy-to-tweet {
+
+  .cool-tweets {
+    @include span-columns(10);
+    @include shift(1);
+    @include media($medium-screen) {
+      @include span-columns(8 of 12);
+      @include shift(2);
+    }
+  }
+}
