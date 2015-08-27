@@ -16,7 +16,7 @@
           <tbody>
             <% @feeds.each do |feed| %>
               <tr>
-                <td><%= feed.name %></td>
+                <td><a href="https://twitter.com/<%= feed.name %>">@<%= feed.name %></a></td>
                 <td><%= raw feed.message
                                     .gsub(/ @(?<arroba>\w+)/, ' <a href="https://twitter.com/\k<arroba>">@\k<arroba></a>')
                                     .gsub(/ #(?<hashtag>\w+)/, ' <a href="https://twitter.com/hashtag/\k<hashtag>?src=hash">#\k<hashtag></a>') %>
