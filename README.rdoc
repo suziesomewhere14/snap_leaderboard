@@ -1,3 +1,5 @@
+{<img src='https://smoke.snap-ci.com/snap-ci-examples/snap_leaderboard/branch/master/build_image' alt='Build Status' />}[https://smoke.snap-ci.com/snap-ci-examples/snap_leaderboard/branch/master]
+
 == README
 
 This README would normally document whatever steps are necessary to get the
