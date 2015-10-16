@@ -8,6 +8,6 @@ namespace :tweet do
       config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
     end
     reply_to_id = URI(ENV['TWITTER_LINK']).path.split('/').last.to_i
-    client.update("@" + ENV['TWITTER_USER'] + " Your pipeline was triggered. Check out the pipeline at https://snap-ci.com/snap-ci-examples/snap_leaderboard/branch/publish", in_reply_to_status_id: reply_to_id)
+    client.update("@" + ENV['TWITTER_USER'] + " You deployed a pipeline! See it here snap.ci/1jI8IRh & snap.ci/tweet2deploy. Thanks for visiting @snap_ci at #DOES15", in_reply_to_status_id: reply_to_id)
   end
 end
